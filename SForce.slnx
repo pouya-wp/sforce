@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SForce.Core/SForce.Core.csproj" />
+    <Project Path="src/SForce.App/SForce.App.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SForce.Tests/SForce.Tests.csproj" />
+  </Folder>
+</Solution>
