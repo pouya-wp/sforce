@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>SFORCE</AssemblyName>
+    <RootNamespace>SForce.App</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>2.0.0</Version>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SForce.Core/SForce.Core.csproj" />
+    <EmbeddedResource Include="../../native/sforce-font-injector.wh.cpp" LogicalName="SForce.App.Native.sforce-font-injector.wh.cpp" />
+    <EmbeddedResource Include="../../native/bin/sforce-font-injector.dll" LogicalName="SForce.App.Native.sforce-font-injector.dll" />
+  </ItemGroup>
+</Project>
