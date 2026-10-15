@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>SForce.Tests</AssemblyName>
+    <RootNamespace>SForce.Tests</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/SForce.Core/SForce.Core.csproj" />
+  </ItemGroup>
+</Project>
