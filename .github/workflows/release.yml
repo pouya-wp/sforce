@@ -1,0 +1,39 @@
+name: Release Build
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    name: Build Windows Executable
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            9.0.x
+            10.0.x
+
+      - name: Publish Single-File Executable
+        run: dotnet publish -c Release -r win-x64 --self-contained false -o dist/
+
+      - name: Package Release
+        shell: pwsh
+        run: |
+          Compress-Archive -Path dist/* -DestinationPath SForce-windows-x64.zip
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: SForce-windows-x64.zip
+          draft: false
+          prerelease: false
+          generate_release_notes: true
