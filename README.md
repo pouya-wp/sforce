@@ -5,6 +5,7 @@
 ### System-Wide Apple San Francisco (SF Pro & SF Arabic) Typography Enforcer for Windows
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?style=flat-square&logo=windows)](https://microsoft.com)
+[![CI](https://github.com/pouya-wp/sforce/actions/workflows/ci.yml/badge.svg)](https://github.com/pouya-wp/sforce/actions/workflows/ci.yml)
 [![.NET](https://img.shields.io/badge/.NET-10.0%20%7C%20C%23-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/)
 [![WPF](https://img.shields.io/badge/UI-WPF%20XAML-blue?style=flat-square)](https://github.com/dotnet/wpf)
 [![Extension](https://img.shields.io/badge/Browser-Manifest%20V3-4285F4?style=flat-square&logo=googlechrome)](https://developer.chrome.com/docs/extensions/)
