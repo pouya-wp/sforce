@@ -21,6 +21,14 @@ jobs:
             9.0.x
             10.0.x
 
+      - name: Prepare native stub DLL for embedded resource
+        shell: pwsh
+        run: |
+          mkdir -Force native/bin
+          if (-not (Test-Path native/bin/sforce-font-injector.dll)) {
+            Set-Content -Path native/bin/sforce-font-injector.dll -Value 'SFORCE_DLL_STUB'
+          }
+
       - name: Restore dependencies
         run: dotnet restore
 
