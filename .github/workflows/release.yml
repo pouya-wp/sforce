@@ -30,8 +30,8 @@ jobs:
             Set-Content -Path native/bin/sforce-font-injector.dll -Value 'SFORCE_DLL_STUB'
           }
 
-      - name: Publish Single-File Executable
-        run: dotnet publish src/SForce.App/SForce.App.csproj -c Release -r win-x64 --self-contained false -o dist/
+      - name: Publish Self-Contained Single-File Executable
+        run: dotnet publish src/SForce.App/SForce.App.csproj -c Release -r win-x64 --self-contained true -o dist/
 
       - name: Package Release
         shell: pwsh
